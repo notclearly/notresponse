@@ -1,0 +1,263 @@
+/* Reset and base */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', Arial, sans-serif;
+    background: linear-gradient(135deg, #f8fafc 0%, #e5e9f2 100%);
+    color: #222;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Header */
+.header {
+    background: #fff;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+}
+.header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header__logo {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    object-fit: cover;
+    margin-right: 1rem;
+}
+.header__nav {
+    display: flex;
+    gap: 1rem;
+}
+.header__link {
+    color: #222;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.25em 0.7em;
+    border-radius: 5px;
+    transition: background 0.2s;
+}
+.header__link:hover {
+    background: #f3f4f7;
+}
+.btn--wallet {
+    background: #fff;
+    color: #222;
+    border: 2px solid #222;
+    border-radius: 8px;
+    padding: 0.6em 1.3em;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+.btn--wallet.connected {
+    background: #222;
+    color: #fff;
+    border-color: #222;
+}
+
+/* Main Mint Area */
+.main {
+    flex: 1 0 auto;
+}
+.mint-section {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 3rem;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+    padding: 2.5rem 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+.mint__left {
+    flex: 1 1 340px;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.mint__title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin: 0 0 0.5em 0;
+}
+.mint__subtitle {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #df509d;
+    margin-bottom: 0.8em;
+}
+.mint__supply {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.6em;
+}
+.mint__supply-current {
+    color: #222;
+}
+.mint__supply-divider {
+    margin: 0 0.2em;
+    color: #b6b6b6;
+}
+.mint__supply-max {
+    color: #b6b6b6;
+}
+.mint__desc {
+    font-size: 1rem;
+    margin-bottom: 1.5em;
+    color: #666;
+}
+.mint__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    max-width: 320px;
+}
+.mint__input-group {
+    display: flex;
+    align-items: center;
+    gap: 0.7em;
+    margin-bottom: 0.5em;
+}
+.mint__input {
+    width: 80px;
+    text-align: center;
+    font-size: 1.2rem;
+    border: 2px solid #df509d;
+    background: #faf6fb;
+    border-radius: 8px;
+    padding: 0.5em 0.2em;
+    font-weight: 600;
+    outline: none;
+    transition: border 0.2s;
+}
+.mint__input:focus {
+    border-color: #222;
+}
+.btn-mint {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: #df509d;
+    color: #fff;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: 700;
+    transition: background 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn-mint:active,
+.btn-mint:focus {
+    background: #c23b8d;
+}
+.btn--mint {
+    background: linear-gradient(90deg, #df509d 0%, #4f8bfa 100%);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    padding: 0.8em 2em;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 1px 8px rgba(79,139,250,0.12);
+    transition: background 0.2s, box-shadow 0.2s;
+}
+.btn--mint:active {
+    background: linear-gradient(90deg, #c23b8d 0%, #3163b3 100%);
+}
+.mint__error {
+    color: #c23b8d;
+    background: #ffebf3;
+    border: 1px solid #df509d;
+    border-radius: 8px;
+    padding: 0.5em 1em;
+    font-size: 0.98rem;
+    display: block;
+}
+
+/* NFT Image */
+.mint__right {
+    flex: 1 1 340px;
+    min-width: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mint__image {
+    max-width: 320px;
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(223,80,157,0.10);
+}
+
+/* Footer */
+.footer {
+    background: #f8fafc;
+    border-top: 1px solid #eaeaea;
+    padding: 1.2rem 0;
+    text-align: center;
+    font-size: 1rem;
+    color: #888;
+    margin-top: auto;
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+    .mint-section {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 1.5rem 0.5rem;
+    }
+    .mint__left,
+    .mint__right {
+        min-width: unset;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .mint__form {
+        margin: 0 auto;
+    }
+}
+
+.btn-mint--max {
+    width: 60px;
+    border-radius: 8px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-left: 0.3em;
+    background: #4f8bfa;
+    color: #fff;
+    transition: background 0.2s;
+    border: none;
+    cursor: pointer;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn-mint--max:active,
+.btn-mint--max:focus {
+    background: #3163b3;
+}

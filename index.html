@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIL PENGEES </title>
+    <meta name="description" content="LIL PENGEES PFP collection on ApeChain🔥">
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container header__container">
+           <h2>LIL PENGEES</h2>
+            <nav class="header__nav">
+                <a href="https://magiceden.io/collections/apechain/0xe95e6a78980109c0a68e9344b2547608d9a3b9bb" target="_blank" rel="noopener" class="header__link">Magic Eden</a>
+                <a href="https://apescan.io/address/0xe95e6a78980109c0a68e9344b2547608d9a3b9bb" target="_blank" rel="noopener" class="header__link">Contract</a>
+            </nav>
+            <button class="btn btn--wallet" id="connect_button">Connect Wallet</button>
+        </div>
+    </header>
+    <main class="main">
+        <section class="mint-section container">
+            <div class="mint__left">
+                <h1 class="mint__title">LIL PENGEES</h1>
+                <p class="mint__subtitle">Live On Mint <span aria-label="fire" role="img">🔥</span></p>
+                <div class="mint__supply">
+                    <span id="totalSupply" class="mint__supply-current">0</span>
+                    <span class="mint__supply-divider">/</span>
+                    <span id="maxSupply" class="mint__supply-max">3333</span>
+                </div>
+                <p class="mint__desc">First 3 NFTs are free! Then 0.3 Ape each.<br>Max 200 per transaction.</p>
+                <!-- Free supply info (general) -->
+                <div id="mint_freesupplyinfo" class="mint__freesupplyinfo"></div>
+                <form class="mint__form" onsubmit="return false;">
+                    <div class="mint__input-group">
+                        <button type="button" class="btn-mint btn-mint--minus" id="btn_minus">-</button>
+                        <input type="number" min="1" max="200" value="1" id="mint_amount" class="mint__input" />
+                        <button type="button" class="btn-mint btn-mint--plus" id="btn_plus">+</button>
+                        <button type="button" class="btn-mint btn-mint--max" id="btn_max">MAX</button>
+                    </div>
+                    <div class="mint__info-row" style="display: flex; justify-content: space-between; align-items: center;">
+                        <!-- Personal free mint info -->
+                        <span id="mint_freeinfo" class="mint__freeinfo"></span>
+                        <!-- Dynamic price info -->
+                        <span id="mint_priceinfo" class="mint__priceinfo"></span>
+                    </div>
+                    <div id="mint_error" class="mint__error" style="display:none;"></div>
+                    <button type="button" class="btn btn--mint" id="mint_button">Mint Now</button>
+                </form>
+            </div>
+            <div class="mint__right">
+                <img src="img/cover.png" alt="LIL PENGEES NFT" class="mint__image">
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container footer__container">
+            <span>© 2025 LIL PENGEES</span>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.10.0/dist/web3.min.js"></script>
+    <script src="scripts/contract.js"></script>
+    <script src="scripts/index.js"></script>
+</body>
+
+</html>
